@@ -1,0 +1,72 @@
+<%-- 
+    FirstMasterPage.master
+    A290/A590 Web Interface Design - Homework Project 2
+    Master Page template that all content pages in this project use.
+    Provides the consistent layout: Header, Menu, MainContent area (placeholder),
+    Sidebar, and Footer. The CSS theme is applied via Web.config (Basic theme).
+    Content pages supply their content into the cpMainContent ContentPlaceHolder.
+--%>
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="FirstMasterPage.master.cs" Inherits="FirstMasterPage" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <%-- The Basic theme CSS is injected automatically by ASP.NET via Web.config.
+         The link below is commented out because the theme handles it.
+    <link href="../Styles/FirstStyles.css" rel="stylesheet" type="text/css" />
+    --%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="PageWrapper">
+
+            <%-- Header region: displays the site name as a link back to home --%>
+            <div id="Header">
+                <a class="HeaderLink" href="~/Default.aspx" runat="server">Fun With Visual Studio!</a>
+            </div>
+
+            <%-- Menu region: ASP.NET Menu control fed by Web.sitemap --%>
+            <div id="MenuWrapper">
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+                <asp:Menu ID="MainMenu" runat="server"
+                    DataSourceID="SiteMapDataSource1"
+                    Orientation="Horizontal"
+                    StaticMenuItemStyle-CssClass="menuItem"
+                    StaticSelectedStyle-CssClass="menuSelected"
+                    StaticHoverStyle-CssClass="menuHover"
+                    BackColor="#4a7fab"
+                    ForeColor="White"
+                    Font-Names="Verdana"
+                    Font-Size="Small"
+                    StaticSubMenuIndent="0">
+                </asp:Menu>
+            </div>
+
+            <%-- Main content area: individual pages inject their content here --%>
+            <div id="MainContent">
+                <asp:ContentPlaceHolder ID="cpMainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <%-- Sidebar: static info visible on every page --%>
+            <div id="Sidebar">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="~/Default.aspx" runat="server">Home</a></li>
+                    <li><a href="~/ContentPages/MyCalendar.aspx" runat="server">Calendar</a></li>
+                    <li><a href="~/ContentPages/MyCalculator.aspx" runat="server">Calculator</a></li>
+                </ul>
+            </div>
+
+            <%-- Footer: copyright notice visible on every page --%>
+            <div id="Footer">
+                &copy; 2026 Fun With Visual Studio &mdash; A290/A590 Web Interface Design
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

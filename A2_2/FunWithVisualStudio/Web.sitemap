@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    Web.sitemap - Site navigation map for FunWithVisualStudio
+    A290/A590 Web Interface Design - Homework Project 2
+    Defines all pages available in the site navigation menu.
+    The Menu control in FirstMasterPage.master reads this file at runtime.
+-->
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/Default.aspx" title="Home" description="Welcome Page">
+        <siteMapNode url="~/ContentPages/MyCalendar.aspx"      title="Calendar"           description="My Calendar Application" />
+        <siteMapNode url="~/ContentPages/MyCalculator.aspx"    title="Calculator"         description="My First Calculator" />
+        <siteMapNode url="~/ContentPages/MySecondCalculator.aspx" title="Calculator 2"    description="My Second Calculator (uses App_Code class)" />
+        <siteMapNode url="~/ContentPages/Login.aspx"           title="Login"              description="Log In Page" />
+        <siteMapNode url="~/ContentPages/FirstContainers.aspx" title="Containers"         description="HTML/ASP Containers Demo" />
+    </siteMapNode>
+</siteMap>
