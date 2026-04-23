@@ -1,0 +1,96 @@
+/*
+    BlueAndYellow.css
+    A290/A590 Web Interface Design - Homework Project 2
+    Alternate theme with a blue and yellow color scheme.
+    Images referenced here should be placed in the BlueAndYellow/Images folder.
+*/
+
+* {
+    font-family: Verdana, Arial, Sans-Serif;
+}
+
+body {
+    margin: 0;
+    background-color: #b3e2e7;
+}
+
+a {
+    color: #da6637;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.Introduction {
+    font-style: italic;
+}
+
+#PageWrapper {
+    width: 984px;
+    margin: 0 auto;
+}
+
+#Header {
+    width: 984px;
+    height: 131px;
+    background-color: #003366;
+    color: #ffff00;
+    line-height: 131px;
+    padding-left: 20px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.HeaderLink {
+    width: 278px;
+    height: 131px;
+    display: block;
+    margin: auto;
+    color: #ffff00;
+    text-decoration: none;
+}
+
+#MenuWrapper {
+    width: 180px;
+    padding-top: 4px;
+    float: left;
+    padding: 10px;
+    background-color: #1a4f8a;
+}
+
+#MainContent {
+    color: yellow;
+    font-size: 0.8em;
+    width: 600px;
+    min-height: 500px;
+    padding: 10px;
+    padding-top: 0;
+    float: left;
+    background-color: #003366;
+}
+
+#Sidebar {
+    font-size: 0.8em;
+    width: 164px;
+    color: yellow;
+    float: left;
+    background-color: #1a4f8a;
+    min-height: 500px;
+    padding: 10px;
+}
+
+#Footer {
+    text-align: center;
+    border-top: 2px dashed gray;
+    height: 37px;
+    clear: both;
+    line-height: 37px;
+    color: #ffff00;
+    background-color: #003366;
+}
